@@ -1,3 +1,7 @@
+body{
+    background: linear-gradient(to left, purple,pink);
+}
+
 .wrapper{
     align-self: center;
     text-align: center;
@@ -5,5 +9,14 @@
 }
 
 #heading{
-    color: blue;
+    color:black;
+    font-size: 3.5rem;
+}
+
+.middle{
+    width: 80%;
+    font-size: 2.5rem;
+    padding-right: 5vh !important;
+    margin-right: 15vh !important;
+    text-align: right ;
 }
