@@ -25,9 +25,21 @@
                 <p><span id="dist"></span></p>
                 <p><span id="postres"></span></p>
             </div>
-            <p>
-                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1144271/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            <div class="a">
+            <p id="Humid" style="opacity: 0;">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1169396/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
             </p>
+            <p id="Temp" style="opacity: 0;">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1169396/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </p>
+
+            <p id="HumidVal" style="opacity: 0;">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1169396/widgets/221120"></iframe>
+            </p>
+            <p id="TempVal" style="opacity: 0;">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1169396/widgets/221121"></iframe>
+            </p>
+            <div>
         </div>
         
         <script src="js/main.js"></script>
