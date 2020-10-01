@@ -1,4 +1,10 @@
 var x = document.getElementById("demo");
+var username=localStorage.getItem("name");
+console.log(username);
+var email=localStorage.getItem("email");
+var user = document.getElementById("user");
+console.log(email);
+user.innerHTML= username;
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -14,14 +20,14 @@ function showPosition(position) {
 }
 
 function checkres(position){
-    var x1= 28.4089;
-    var y1= 77.3178;
+    var x1= 20.951665800000004;
+    var y1= 85.0985236;
     var x2= position.coords.latitude;
     var y2=position.coords.longitude;
     var c = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2);
     var dis = Math.sqrt(c) * 111;
-    var res = document.getElementById("dist");
-    res.innerHTML = dis;
+    var res =  document.getElementById("dist") ;
+    res.innerHTML = "You are approximately "+ dis + " km far away from the sensor";
     postes(dis);
 }
 
@@ -30,7 +36,8 @@ function postes(dis){
     if(dis>10){
         a.innerHTML = "You are out of Range right now"
     }
-    /*else{
-
-    }*/
+    else{
+      
+    }
 }
+
