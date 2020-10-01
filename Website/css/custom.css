@@ -2,6 +2,10 @@ body{
     background: linear-gradient(to left, purple,pink);
 }
 
+button{
+    font-size: larger;
+}
+
 .wrapper{
     align-self: center;
     text-align: center;
@@ -18,5 +22,4 @@ body{
     font-size: 2.5rem;
     padding-right: 5vh !important;
     margin-right: 15vh !important;
-    text-align: right ;
 }
