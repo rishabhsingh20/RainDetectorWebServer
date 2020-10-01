@@ -1,0 +1,9 @@
+.wrapper{
+    align-self: center;
+    text-align: center;
+    padding-top: 2vh; 
+}
+
+#heading{
+    color: blue;
+}
