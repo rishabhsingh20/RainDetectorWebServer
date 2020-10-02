@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <title> IoT WebServer </title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='custom.css') }}">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1 id="heading"><center> Rain Detector WebServer </center></h1>    
+ 	    <div><span><h4>Welcome</h4></span></div>
+	    <br>
+            <br>
+            <br>
+            <button onclick="getLocation()">Get Location</button>
+            <p id="demo"></p>
+
+            <div id="result">
+                <p><span id="dist"></span></p>
+                <p><span id="postres"></span></p>
+            </div>
+            <div class="a">
+            <p id="Humid" style="opacity: 0;">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1169396/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </p>
+            <p id="Temp" style="opacity: 0;">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1169396/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </p>
+
+            <p id="HumidVal" style="opacity: 0;">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1169396/widgets/221120"></iframe>
+            </p>
+            <p id="TempVal" style="opacity: 0;">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1169396/widgets/221121"></iframe>
+            </p>
+            <div>
+        </div>
+        <br>
+        <div id="Secret_inst" style="opacity: 0;">
+            <H3>
+                Please enter the values of Temperature and Humidity you see above to get your predictions
+            </H3>
+        </div>
+        <div id="Secret_Form" style="opacity: 0;">
+            <form action="/" method="post">
+                <label for="temperature">Temperature:</label><br>
+                <input type="number" step="0.01" id="temperature" name="temperature" value = "val1"><br>
+                <label for="lname">Humidity:</label><br>
+                <input type="number" step="0.01" id="humidity" name="humidity" value="val2"><br><br>
+                <input type="submit" value="Submit">
+            </form> 
+        </div>
+        <script type="text/javascript"
+         src="{{ url_for('static', filename='main.js') }}"></script>
+    </body>
+</html>
