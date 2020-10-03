@@ -1,8 +1,0 @@
-1) CCIoT_trnr is the Trainer Program where I made trained the classifier and pickled it for quick use (we dont have to train it always) 
-[DONT MESS WITH THIS UNLESS YOU WANNA RUIN YOUR PICKLE]
-
-2) CCIoT_script is to be run in bg by server and uses the 'final_clf.pkl' 
-
-3) final_clf is the pickled trained classifier
-
-4) data1.csv and data1.xlxs was used for training
