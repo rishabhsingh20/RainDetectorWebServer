@@ -20,8 +20,8 @@ function showPosition(position) {
 }
 
 function checkres(position){
-    var x1= 17.9174681;
-    var y1= 77.50298599999999;
+    var x1= 28.595403;
+    var y1= 77.215292;
     var x2= position.coords.latitude;
     var y2=position.coords.longitude;
     var c = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2);
@@ -39,6 +39,7 @@ function postes(dis){
     else{
       a.innerHTML = "Getting Output Sensor Values...";
       getSensorData();
+      makeForm();
     }
 }
 
@@ -54,3 +55,9 @@ function getSensorData(){
   tempVal.style.opacity=1;
 }
 
+function makeForm(){
+  var form_state = document.getElementById('Secret_Form');
+  var inst_state = document.getElementById('Secret_inst');
+  form_state.style.opacity=1;
+  inst_state.style.opacity=1;
+}
